@@ -415,7 +415,7 @@ class Wizard
      */
     private function selectIndexFromList($message, $max, $min = 0)
     {
-        $selectedIndex = int($this->prompt($message));
+        $selectedIndex = intval($this->prompt($message));
         if ($selectedIndex > $max) {
             printf(
                 'You must select a value between %d and %d' . PHP_EOL,
