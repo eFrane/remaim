@@ -378,6 +378,12 @@ class Wizard
         $message = 'Please select (type) a project ID';
         $message .= ($can_return) ? ' or leave empty to go back to the previous step' : '';
 
+        if (is_null($projects['highest'])) {
+            $projects['highest'] = max(array_map(function ($project) {
+                return $project['id'];
+            }, $projects['projects']));
+        }
+
         return $this->selectIndexFromList(
             $message,
             $projects['highest'],
