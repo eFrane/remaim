@@ -42,7 +42,7 @@ trait Redmine
      * Queries Redmine for a list of all projects on the platform.
      * @todo : find a way to not have the print side-effects!!
      *
-     * @return Array A tree structure of all projects on the redmine platform
+     * @return array A tree structure of all projects on the redmine platform
      */
     public function listRedmineProjects()
     {
